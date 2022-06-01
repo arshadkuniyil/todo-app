@@ -23,19 +23,16 @@ h2 {
   color: white;
 }
 
-.app .input {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .app .input {
+
   margin-top: 0.8em;
   width: 20em;
   height: 2em;
   background-color: white;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   border-radius: 6px;
   padding: 5px;
@@ -55,17 +52,20 @@ h2 {
   color: grey;
   margin-right: 5px;
 }
-.app .todos {
+
+.todos {
   display: flex;
+
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.app .todos .todo {
-  
+
+.todo {
+
   margin-top: 0.8em;
   width: 20em;
-  
+
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -73,13 +73,14 @@ h2 {
   border-radius: 6px;
   padding: 5px;
 }
-.app .todos .todo .left {
+
+.left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.app .todos .todo .left p {
+.left p {
   white-space: pre-line;
   margin-left: 3px;
   font-size: medium;
@@ -88,3 +89,67 @@ h2 {
   color: grey;
 }
 
+.todo_completed {
+
+  margin-top: 0.8em;
+  width: 20em;
+
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  padding: 5px;
+}
+
+.app {
+  width: 100%;
+}
+
+.deleted_todos {
+  
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  
+  float: left;
+  width: 33%;
+}
+.deleted_todos p{
+  color: red;
+  
+
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+
+  float: left;
+  width: 33%;
+  align-items: center;
+
+}
+
+.completed {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  float: left;
+  width: 33%;
+  align-items: center;
+}
+.completed p{
+  text-decoration: line-through;
+}
+.restore{
+  content: "\f00d";
+  color: red;
+}

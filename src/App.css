@@ -62,9 +62,10 @@ h2 {
   flex-direction: column;
 }
 .app .todos .todo {
+  
   margin-top: 0.8em;
   width: 20em;
-  height: 2em;
+  
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -79,9 +80,11 @@ h2 {
 }
 
 .app .todos .todo .left p {
+  white-space: pre-line;
   margin-left: 3px;
   font-size: medium;
   font-weight: 700;
   font-style: normal;
   color: grey;
 }
+

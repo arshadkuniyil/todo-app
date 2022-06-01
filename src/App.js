@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-
-  let dateString = new Date().toISOString().slice(0, 10)
-  let dayName = new Date(dateString).toLocaleString('en-us', { weekday: 'long' })
+  
+  let dayName = new Date().toLocaleString('en-US', {weekday: 'long'})
+  
 
   const [toDo, setTodo] = useState('')
   const [toDos, setTodos] = useState([])
@@ -18,7 +18,7 @@ function App() {
         <h1>Deleted</h1>
         {
           dltToDos.map((obj, index) => {
-            
+
             return (
               <div className="todo" key={index}>
 
@@ -29,6 +29,7 @@ function App() {
 
                     dltToDos.filter(obj2 => {
                       if (obj2.id === obj.id) setTodos([...toDos, obj2])
+                      return null
                     })
 
                   }} />
@@ -38,7 +39,7 @@ function App() {
                 </div>
 
                 <div className="right">
-                  <i className="fas fa-times" style={{"color":"red"}}
+                  <i className="fas fa-times" style={{ "color": "red" }}
                     onClick={
                       () => {
                         const newTodos = dltToDos.filter(obj2 => obj2.id !== obj.id);
@@ -120,6 +121,7 @@ function App() {
                           setTodos(newTodos);
                           toDos.filter(obj2 => {
                             if (obj2.id === obj.id) setDltTodos([...dltToDos, obj2])
+                            return null
                           })
                         }
                       }
@@ -172,6 +174,7 @@ function App() {
                         setTodos(newTodos);
                         toDos.filter(obj2 => {
                           if (obj2.id === obj.id) setDltTodos([...dltToDos, obj2])
+                          return null
                         })
                       }
                     }></i>
